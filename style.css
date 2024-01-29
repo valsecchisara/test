@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cc9fff; /* Imposta il colore di sfondo su un lilla chiaro */
+}
+
+.navbar {
+    display: flex; /* Usa flexbox per allineare gli elementi della navbar */
+    justify-content: center; /* Centra gli elementi all'interno della navbar */
+    background-color: #7e4ab8; /* Imposta il colore di sfondo della navbar su un violetto scuro */
+    padding: 10px; /* Aggiunge spazio intorno agli elementi all'interno della navbar */
+}
+
+.navbar img {
+    height: 80px; /* Imposta l'altezza dell'immagine nella navbar */
+}
+
+.introduction, .text-section, .image-table {
+    margin: 20px; /* Aggiunge margine esterno per separare queste sezioni dal resto del contenuto */
+    padding: 20px; /* Aggiunge padding interno per spazio tra il testo e i bordi della sezione */
+    text-align: center; /* Centra il testo all'interno di queste sezioni */
+    background-color: #ff92ee; /* Imposta il colore di sfondo su un rosa shocking */
+    color: #fff; /* Imposta il colore del testo su bianco per un miglior contrasto */
+}
+
+.image-table img {
+    width: 100px; /* Imposta la larghezza delle immagini nella sezione image-table */
+    height: 100px; /* Imposta l'altezza delle immagini nella sezione image-table */
+    margin: 10px; /* Aggiunge un margine intorno alle immagini per separarle */
+    border: 3px solid #ff42e2; /* Aggiunge un bordo fucsia intenso alle immagini */
+}
+
+.image-table p {
+    text-align: center; /* Centra il testo delle descrizioni sotto le immagini */
+    color: #7e4ab8; /* Imposta il colore del testo su un violetto scuro per queste descrizioni */
+}
+
+footer {
+    background-color: #7e4ab8; /* Imposta il colore di sfondo del footer su violetto scuro */
+    color: white; /* Imposta il colore del testo su bianco per il footer */
+    text-align: center; /* Centra il testo all'interno del footer */
+    padding: 20px 0; /* Aggiunge padding sopra e sotto all'interno del footer */
+}
+
+.footer-content {
+    display: flex; /* Usa flexbox per allineare gli elementi del footer-content */
+    justify-content: space-around; /* Distribuisce gli elementi del footer-content uniformemente */
+    padding: 20px; /* Aggiunge padding all'interno di footer-content */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Aggiunge un margine sotto ai titoli delle sezioni del footer */
+}
+
+.footer-section ul,
+.footer-section p,
+.footer-section a {
+    list-style: none; /* Rimuove lo stile di lista (punti) per gli elementi ul */
+    padding: 0; /* Rimuove il padding per questi elementi */
+    margin: 0; /* Rimuove il margine per questi elementi */
+    line-height: 1.6; /* Imposta l'altezza della linea per migliorare la leggibilità */
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: white; /* Imposta il colore del testo su bianco per questi elementi */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Aggiunge un margine superiore al footer-bottom per separarlo dal resto del footer */
+}
+
+/* Stili per schermi con larghezza massima di 768px (es. tablet, smartphone) */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Imposta gli elementi del footer in colonna anziché in riga su schermi più piccoli */
+    }
+}
