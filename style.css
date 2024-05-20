@@ -1,74 +1,376 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #cc9fff; /* Imposta il colore di sfondo su un lilla chiaro */
+body, html {
+    margin: 0;
+    padding: 10px; /* Uniform spacing around the content */
+    font-family: 'Georgia', serif;
+    background: url('https://source.unsplash.com/random/1024x768?light-fashion') no-repeat center center fixed;
+    background-size: cover;
+    color: #836c88;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    box-sizing: border-box; /* Include padding in the width/height calculations */
 }
 
-.navbar {
-    display: flex; /* Usa flexbox per allineare gli elementi della navbar */
-    justify-content: center; /* Centra gli elementi all'interno della navbar */
-    background-color: #7e4ab8; /* Imposta il colore di sfondo della navbar su un violetto scuro */
-    padding: 10px; /* Aggiunge spazio intorno agli elementi all'interno della navbar */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Same transparency as header */
+    padding: 20px;
+    border-radius: 10px; /* Same border radius as header */
+    margin: 20px 0; /* Top and bottom margins */
+    width: auto; /* Automatically adjusts to the padding of the body */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Same shadow as header */
+    position: relative; /* Ensure stacking context */
+    z-index: 1; /* Lower z-index than header */
 }
 
-.navbar img {
-    height: 80px; /* Imposta l'altezza dell'immagine nella navbar */
+.header {
+    background-color: rgba(255, 255, 255, 1);
+    color: #5d4954;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.introduction, .text-section, .image-table {
-    margin: 20px; /* Aggiunge margine esterno per separare queste sezioni dal resto del contenuto */
-    padding: 20px; /* Aggiunge padding interno per spazio tra il testo e i bordi della sezione */
-    text-align: center; /* Centra il testo all'interno di queste sezioni */
-    background-color: #ff92ee; /* Imposta il colore di sfondo su un rosa shocking */
-    color: #fff; /* Imposta il colore del testo su bianco per un miglior contrasto */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.image-table img {
-    width: 100px; /* Imposta la larghezza delle immagini nella sezione image-table */
-    height: 100px; /* Imposta l'altezza delle immagini nella sezione image-table */
-    margin: 10px; /* Aggiunge un margine intorno alle immagini per separarle */
-    border: 3px solid #ff42e2; /* Aggiunge un bordo fucsia intenso alle immagini */
+nav ul li {
+    padding: 0 15px;
 }
 
-.image-table p {
-    text-align: center; /* Centra il testo delle descrizioni sotto le immagini */
-    color: #7e4ab8; /* Imposta il colore del testo su un violetto scuro per queste descrizioni */
+nav ul li a {
+    text-decoration: none;
+    color: #5d4954;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #836c88;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #5d4954;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.header-logo {
+    height: 130px;
+    width: auto;
+    vertical-align: right;
+}
+
+.cover-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('https://source.unsplash.com/random/1024x768?professional-fashion') no-repeat center center;
+    background-size: cover;
+    margin-top: 160px;
+    border-radius: 10px;
+}
+
+.cover-title, .sub-cover-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.cover-title {
+    top: 30%;
+    font-size: 5vw;
+}
+
+.sub-cover-title {
+    top: 50%;
+    font-size: 3vw;
+}
+
+@media (min-width: 481px) {
+    .cover-title {
+        font-size: 46px;
+    }
+
+    .sub-cover-title {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cover-title {
+        font-size: 58px;
+    }
+
+    .sub-cover-title {
+        font-size: 32px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.social-icons a {
+    color: #5d4954;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.social-icons a:hover {
+    color: #836c88;
+}
+
+section {
+    padding-top: 100px;
+    margin-top: -100px;
+    position:relative;
+    display: block;
 }
 
 footer {
-    background-color: #7e4ab8; /* Imposta il colore di sfondo del footer su violetto scuro */
-    color: white; /* Imposta il colore del testo su bianco per il footer */
-    text-align: center; /* Centra il testo all'interno del footer */
-    padding: 20px 0; /* Aggiunge padding sopra e sotto all'interno del footer */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #5d4954;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-.footer-content {
-    display: flex; /* Usa flexbox per allineare gli elementi del footer-content */
-    justify-content: space-around; /* Distribuisce gli elementi del footer-content uniformemente */
-    padding: 20px; /* Aggiunge padding all'interno di footer-content */
+.gallery-container {
+    display: flex; /* Usa flex per un migliore controllo del centramento */
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    gap: 60px;
+    margin: 20px 0;
 }
 
-.footer-section h3 {
-    margin-bottom: 10px; /* Aggiunge un margine sotto ai titoli delle sezioni del footer */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
 }
 
-.footer-section ul,
-.footer-section p,
-.footer-section a {
-    list-style: none; /* Rimuove lo stile di lista (punti) per gli elementi ul */
-    padding: 0; /* Rimuove il padding per questi elementi */
-    margin: 0; /* Rimuove il margine per questi elementi */
-    line-height: 1.6; /* Imposta l'altezza della linea per migliorare la leggibilità */
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
-    color: white; /* Imposta il colore del testo su bianco per questi elementi */
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.footer-bottom {
-    margin-top: 20px; /* Aggiunge un margine superiore al footer-bottom per separarlo dal resto del footer */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
 }
 
-/* Stili per schermi con larghezza massima di 768px (es. tablet, smartphone) */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Imposta gli elementi del footer in colonna anziché in riga su schermi più piccoli */
+.news-text {
+    padding: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.news-text h3 {
+    margin-top: 5px;
+    color: #3f3351;
+    font-size: 18px;
+}
+
+.news-text p {
+    font-size: 14px;
+    color: #5d4954;
+}
+
+.news-text a {
+    margin-top: 10px;
+    color: #6a0dad;
+    text-decoration: none;
+}
+
+.news-text a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #5d4954;
+    display: block;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #dcd6f7;
+    color: #3f3351;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c5b9e2;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.about-image {
+    width: 40%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox-prev, .lightbox-next {
+    cursor: pointer;
+    position:absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight:bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.lightbox-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.lightbox-next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+@media screen and (max-width: 700px){
+    .lightbox-prev, .lightbox-next {
+        font-size: 12px;
+    }
+    .lightbox-close {
+        font-size: 25px;
     }
 }
