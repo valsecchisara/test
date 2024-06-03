@@ -1,376 +1,376 @@
 body, html {
-    margin: 0;
-    padding: 10px; /* Uniform spacing around the content */
-    font-family: 'Georgia', serif;
-    background: url('https://source.unsplash.com/random/1024x768?light-fashion') no-repeat center center fixed;
-    background-size: cover;
-    color: #836c88;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    box-sizing: border-box; /* Include padding in the width/height calculations */
+    margin: 0; /* Rimuove i margini predefiniti */
+    padding: 10px; /* Spaziatura uniforme intorno al contenuto */
+    font-family: 'Georgia', serif; /* Imposta il font per il testo */
+    background: url('https://source.unsplash.com/random/1024x768?light-fashion') no-repeat center center fixed; /* Immagine di sfondo */
+    background-size: cover; /* Adatta l'immagine di sfondo per coprire l'intera area */
+    color: #836c88; /* Colore del testo */
+    overflow-x: hidden; /* Previene lo scorrimento orizzontale */
+    box-sizing: border-box; /* Include padding nelle dimensioni calcolate */
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.9); /* Same transparency as header */
-    padding: 20px;
-    border-radius: 10px; /* Same border radius as header */
-    margin: 20px 0; /* Top and bottom margins */
-    width: auto; /* Automatically adjusts to the padding of the body */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Same shadow as header */
-    position: relative; /* Ensure stacking context */
-    z-index: 1; /* Lower z-index than header */
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
+    padding: 20px; /* Spaziatura interna */
+    border-radius: 10px; /* Angoli arrotondati */
+    margin: 20px 0; /* Margine superiore e inferiore */
+    width: auto; /* Adatta la larghezza automaticamente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra intorno al contenuto */
+    position: relative; /* Posizionamento relativo per il contesto di sovrapposizione */
+    z-index: 1; /* Indice di profondità inferiore rispetto all'header */
 }
 
 .header {
-    background-color: rgba(255, 255, 255, 1);
-    color: #5d4954;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background-color: rgba(255, 255, 255, 1); /* Sfondo bianco */
+    color: #5d4954; /* Colore del testo */
+    padding: 20px; /* Spaziatura interna */
+    text-align: center; /* Testo centrato */
+    position: fixed; /* Posizione fissa */
+    top: 20px; /* Distanza dal bordo superiore */
+    left: 20px; /* Distanza dal bordo sinistro */
+    right: 20px; /* Distanza dal bordo destro */
+    z-index: 1000; /* Indice di profondità elevato */
+    display: flex; /* Usa flexbox per il layout */
+    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+    align-items: center; /* Allinea gli elementi al centro verticalmente */
+    height: 80px; /* Altezza dell'header */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Ombra intorno all'header */
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex; /* Disposizione flessibile degli elementi */
+    list-style: none; /* Rimuove i punti elenco */
+    margin: 0; /* Rimuove il margine */
+    padding: 0; /* Rimuove la spaziatura interna */
 }
 
 nav ul li {
-    padding: 0 15px;
+    padding: 0 15px; /* Spaziatura interna degli elementi di lista */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #5d4954;
-    font-size: 16px;
-    padding: 5px 10px;
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #5d4954; /* Colore del testo */
+    font-size: 16px; /* Dimensione del testo */
+    padding: 5px 10px; /* Spaziatura interna dei link */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #836c88;
+    background-color: rgba(255, 255, 255, 0.5); /* Colore di sfondo al passaggio del mouse */
+    color: #836c88; /* Colore del testo al passaggio del mouse */
 }
 
 .hamburger {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: #5d4954;
-    cursor: pointer;
+    display: none; /* Nasconde il bottone hamburger */
+    font-size: 30px; /* Dimensione del testo del bottone */
+    background: none; /* Rimuove lo sfondo */
+    border: none; /* Rimuove il bordo */
+    color: #5d4954; /* Colore del testo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block;
+        display: block; /* Mostra il bottone hamburger su schermi piccoli */
     }
 
     nav {
-        position: absolute;
-        right: 0;
-        top: 60px;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        display: none;
-        flex-direction: column;
+        position: absolute; /* Posizionamento assoluto */
+        right: 0; /* Allinea a destra */
+        top: 60px; /* Posiziona sotto l'header */
+        width: 100%; /* Larghezza totale */
+        background: rgba(255, 255, 255, 0.95); /* Sfondo semi-trasparente */
+        display: none; /* Nasconde il menu */
+        flex-direction: column; /* Dispone gli elementi in colonna */
     }
 
     nav ul {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: column; /* Dispone gli elementi di lista in colonna */
+        width: 100%; /* Larghezza totale */
     }
 
     nav ul li {
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
+        text-align: center; /* Allinea il testo al centro */
+        width: 100%; /* Larghezza totale */
+        padding: 10px 0; /* Spaziatura interna */
     }
 }
 
 .header-logo {
-    height: 130px;
-    width: auto;
-    vertical-align: right;
+    height: 130px; /* Altezza del logo */
+    width: auto; /* Larghezza automatica */
+    vertical-align: right; /* Allineamento verticale */
 }
 
 .cover-image {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background: url('https://source.unsplash.com/random/1024x768?professional-fashion') no-repeat center center;
-    background-size: cover;
-    margin-top: 160px;
-    border-radius: 10px;
+    position: relative; /* Posizionamento relativo */
+    width: 100%; /* Larghezza totale */
+    height: 300px; /* Altezza della copertina */
+    background: url('https://source.unsplash.com/random/1024x768?professional-fashion') no-repeat center center; /* Immagine di sfondo */
+    background-size: cover; /* Adatta l'immagine di sfondo */
+    margin-top: 160px; /* Margine superiore */
+    border-radius: 10px; /* Angoli arrotondati */
 }
 
 .cover-title, .sub-cover-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    font-family: 'Georgia', serif;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    position: absolute; /* Posizionamento assoluto */
+    left: 50%; /* Allineamento orizzontale al centro */
+    transform: translateX(-50%); /* Traslazione per centrare */
+    text-align: center; /* Testo centrato */
+    color: white; /* Colore del testo */
+    font-family: 'Georgia', serif; /* Font del testo */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Ombra del testo */
 }
 
 .cover-title {
-    top: 30%;
-    font-size: 5vw;
+    top: 30%; /* Distanza dal bordo superiore */
+    font-size: 5vw; /* Dimensione del testo relativa alla larghezza dello schermo */
 }
 
 .sub-cover-title {
-    top: 50%;
-    font-size: 3vw;
+    top: 50%; /* Distanza dal bordo superiore */
+    font-size: 3vw; /* Dimensione del testo relativa alla larghezza dello schermo */
 }
 
 @media (min-width: 481px) {
     .cover-title {
-        font-size: 46px;
+        font-size: 46px; /* Dimensione del testo su schermi più larghi */
     }
 
     .sub-cover-title {
-        font-size: 24px;
+        font-size: 24px; /* Dimensione del testo su schermi più larghi */
     }
 }
 
 @media (min-width: 768px) {
     .cover-title {
-        font-size: 58px;
+        font-size: 58px; /* Dimensione del testo su schermi ancora più larghi */
     }
 
     .sub-cover-title {
-        font-size: 32px;
+        font-size: 32px; /* Dimensione del testo su schermi ancora più larghi */
     }
 }
 
 .social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
+    display: flex; /* Disposizione flessibile degli elementi */
+    align-items: center; /* Allineamento verticale al centro */
+    justify-content: space-between; /* Distribuzione dello spazio tra gli elementi */
+    padding: 0 10px; /* Spaziatura interna */
 }
 
 .social-icons a {
-    color: #5d4954;
-    font-size: 24px;
-    margin-left: 10px;
+    color: #5d4954; /* Colore del testo */
+    font-size: 24px; /* Dimensione del testo */
+    margin-left: 10px; /* Margine a sinistra */
 }
 
 .social-icons a:hover {
-    color: #836c88;
+    color: #836c88; /* Colore del testo al passaggio del mouse */
 }
 
 section {
-    padding-top: 100px;
-    margin-top: -100px;
-    position:relative;
-    display: block;
+    padding-top: 100px; /* Spaziatura interna superiore */
+    margin-top: -100px; /* Margine superiore negativo */
+    position: relative; /* Posizionamento relativo */
+    display: block; /* Disposizione a blocco */
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #5d4954;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente */
+    color: #5d4954; /* Colore del testo */
+    text-align: center; /* Testo centrato */
+    padding: 10px; /* Spaziatura interna */
+    margin-top: 20px; /* Margine superiore */
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Ombra sopra il footer */
+    width: 100%; /* Larghezza totale */
 }
 
 .gallery-container {
     display: flex; /* Usa flex per un migliore controllo del centramento */
     flex-wrap: wrap; /* Permette agli elementi di andare a capo */
     justify-content: center; /* Centra gli elementi orizzontalmente */
-    gap: 60px;
-    margin: 20px 0;
+    gap: 60px; /* Spaziatura tra gli elementi */
+    margin: 20px 0; /* Margine superiore e inferiore */
 }
 
 .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
+    display: flex; /* Disposizione flessibile degli elementi */
+    flex-direction: column; /* Disposizione degli elementi in colonna */
+    align-items: center; /* Allineamento degli elementi al centro */
+    background: white; /* Sfondo bianco */
+    border-radius: 10px; /* Angoli arrotondati */
+    overflow: hidden; /* Nasconde il contenuto eccedente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra intorno agli elementi */
+    transition: transform 0.2s ease; /* Transizione per l'effetto hover */
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 100%; /* Larghezza totale dell'immagine */
+    height: 200px; /* Altezza dell'immagine */
+    object-fit: cover; /* Adatta l'immagine al contenitore */
 }
 
 .news-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 10px;
-    margin: 20px 0;
+    display: grid; /* Disposizione a griglia degli elementi */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonne adattive */
+    gap: 10px; /* Spaziatura tra gli elementi */
+    margin: 20px 0; /* Margine superiore e inferiore */
 }
 
 .news-text {
-    padding: 10px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
+    padding: 10px; /* Spaziatura interna */
+    text-align: center; /* Testo centrato */
+    background: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
 }
 
 .news-text h3 {
-    margin-top: 5px;
-    color: #3f3351;
-    font-size: 18px;
+    margin-top: 5px; /* Margine superiore */
+    color: #3f3351; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
 }
 
 .news-text p {
-    font-size: 14px;
-    color: #5d4954;
+    font-size: 14px; /* Dimensione del testo */
+    color: #5d4954; /* Colore del testo */
 }
 
 .news-text a {
-    margin-top: 10px;
-    color: #6a0dad;
-    text-decoration: none;
+    margin-top: 10px; /* Margine superiore */
+    color: #6a0dad; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
 }
 
 .news-text a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Sottolinea il testo al passaggio del mouse */
 }
 
 .contact-form {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
-    width: 80%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
+    padding: 30px; /* Spaziatura interna */
+    border-radius: 15px; /* Angoli arrotondati */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Ombra intorno al contenitore */
+    margin: 0 auto; /* Centratura del contenitore */
+    width: 80%; /* Larghezza del contenitore */
+    max-width: 500px; /* Larghezza massima del contenitore */
+    display: flex; /* Disposizione flessibile degli elementi */
+    flex-direction: column; /* Disposizione degli elementi in colonna */
+    align-items: center; /* Allineamento degli elementi al centro */
 }
 
 .contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    font-family: 'Georgia', serif;
-    font-size: 16px;
-    color: #5d4954;
-    display: block;
+    width: 100%; /* Larghezza totale degli input */
+    padding: 15px; /* Spaziatura interna */
+    margin-bottom: 10px; /* Margine inferiore */
+    border: none; /* Rimozione del bordo */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombra interna */
+    font-family: 'Georgia', serif; /* Font del testo */
+    font-size: 16px; /* Dimensione del testo */
+    color: #5d4954; /* Colore del testo */
+    display: block; /* Disposizione a blocco */
 }
 
 .contact-form button {
-    width: 100%;
-    padding: 15px;
-    background-color: #dcd6f7;
-    color: #3f3351;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    width: 100%; /* Larghezza totale del bottone */
+    padding: 15px; /* Spaziatura interna */
+    background-color: #dcd6f7; /* Colore di sfondo */
+    color: #3f3351; /* Colore del testo */
+    border: none; /* Rimozione del bordo */
+    border-radius: 8px; /* Angoli arrotondati */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    font-size: 18px; /* Dimensione del testo */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Ombra intorno al bottone */
+    transition: background-color 0.3s ease; /* Transizione per il colore di sfondo */
 }
 
 .contact-form button:hover {
-    background-color: #c5b9e2;
+    background-color: #c5b9e2; /* Colore di sfondo al passaggio del mouse */
 }
 
 .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Disposizione flessibile degli elementi */
+    align-items: center; /* Allineamento verticale al centro */
+    justify-content: space-between; /* Distribuzione dello spazio tra gli elementi */
 }
 
 .about-text {
-    width: 60%;
-    padding-right: 20px;
+    width: 60%; /* Larghezza del contenitore */
+    padding-right: 20px; /* Spaziatura interna a destra */
 }
 
 .about-image {
-    width: 40%;
+    width: 40%; /* Larghezza del contenitore */
 }
 
 .about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%; /* Larghezza totale dell'immagine */
+    height: auto; /* Altezza automatica */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombra intorno all'immagine */
 }
 
 .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0,0.9);
+    display: none; /* Nasconde il lightbox */
+    position: fixed; /* Posizione fissa */
+    z-index: 9999; /* Indice di profondità elevato */
+    padding-top: 100px; /* Spaziatura interna superiore */
+    left: 0; /* Allinea a sinistra */
+    top: 0; /* Allinea in alto */
+    width: 100%; /* Larghezza totale */
+    height: 100%; /* Altezza totale */
+    overflow: auto; /* Abilita lo scorrimento */
+    background-color: rgb(0,0,0,0.9); /* Colore di sfondo semi-trasparente */
 }
 
 .lightbox-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    margin: auto; /* Centratura del contenuto */
+    display: block; /* Disposizione a blocco */
+    width: 80%; /* Larghezza del contenuto */
+    max-width: 700px; /* Larghezza massima del contenuto */
 }
 
 .lightbox-close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+    position: absolute; /* Posizionamento assoluto */
+    top: 25px; /* Distanza dal bordo superiore */
+    right: 35px; /* Distanza dal bordo destro */
+    color: #f1f1f1; /* Colore del testo */
+    font-size: 40px; /* Dimensione del testo */
+    font-weight: bold; /* Grassetto */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
 }
 
 .lightbox-prev, .lightbox-next {
-    cursor: pointer;
-    position:absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight:bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    position: absolute; /* Posizionamento assoluto */
+    top: 50%; /* Allineamento verticale al centro */
+    width: auto; /* Larghezza automatica */
+    padding: 16px; /* Spaziatura interna */
+    margin-top: -50px; /* Margine superiore negativo */
+    color: white; /* Colore del testo */
+    font-weight: bold; /* Grassetto */
+    font-size: 20px; /* Dimensione del testo */
+    transition: 0.6s ease; /* Transizione */
+    border-radius: 0 3px 3px 0; /* Angoli arrotondati */
+    user-select: none; /* Disabilita la selezione del testo */
 }
 
 .lightbox-prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
+    left: 0; /* Allinea a sinistra */
+    border-radius: 3px 0 0 3px; /* Angoli arrotondati */
 }
 
 .lightbox-next {
-    right: 0;
-    border-radius: 0 3px 3px 0;
+    right: 0; /* Allinea a destra */
+    border-radius: 0 3px 3px 0; /* Angoli arrotondati */
 }
 
 @media screen and (max-width: 700px){
     .lightbox-prev, .lightbox-next {
-        font-size: 12px;
+        font-size: 12px; /* Riduce la dimensione del testo */
     }
     .lightbox-close {
-        font-size: 25px;
+        font-size: 25px; /* Riduce la dimensione del testo */
     }
 }
