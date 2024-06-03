@@ -1,92 +1,92 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    const links = document.querySelectorAll('nav a[href^="#"]');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.querySelector('.lightbox-content');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const lightboxPrev = document.querySelector('.lightbox-prev');
-    const lightboxNext = document.querySelector('.lightbox-next');
-    const images = document.querySelectorAll('.gallery-container img');
-    const apiKey = 'wNW9BXvENBTT4ZPZdzJlxxBcsq5w4WSA';
-    const newsContainer = document.getElementById('news-articles');
-    let currentIndex = 0;
+    const hamburger = document.querySelector('.hamburger'); // Seleziona il bottone hamburger
+    const nav = document.querySelector('nav'); // Seleziona il menu di navigazione
+    const links = document.querySelectorAll('nav a[href^="#"]'); // Seleziona tutti i link di navigazione interni
+    const lightbox = document.getElementById('lightbox'); // Seleziona il lightbox
+    const lightboxImage = document.querySelector('.lightbox-content'); // Seleziona l'immagine del lightbox
+    const lightboxClose = document.querySelector('.lightbox-close'); // Seleziona il bottone per chiudere il lightbox
+    const lightboxPrev = document.querySelector('.lightbox-prev'); // Seleziona il bottone per l'immagine precedente
+    const lightboxNext = document.querySelector('.lightbox-next'); // Seleziona il bottone per l'immagine successiva
+    const images = document.querySelectorAll('.gallery-container img'); // Seleziona tutte le immagini della galleria
+    const apiKey = 'wNW9BXvENBTT4ZPZdzJlxxBcsq5w4WSA'; // API key per NYT (da nascondere)
+    const newsContainer = document.getElementById('news-articles'); // Seleziona il contenitore per le notizie
+    let currentIndex = 0; // Indice corrente per la navigazione del lightbox
 
     function toggleNav() {
-        nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+        nav.style.display = (nav.style.display === 'block') ? 'none' : 'block'; // Alterna la visibilità del menu di navigazione
     }
 
     function closeNav() {
         if (nav.style.display === 'block') {
-            nav.style.display = 'none';
+            nav.style.display = 'none'; // Chiude il menu di navigazione se è aperto
         }
     }
 
     function showLightbox(index) {
-        lightbox.style.display = 'block';
-        lightboxImage.src = images[index].src;
-        currentIndex = index;
+        lightbox.style.display = 'block'; // Mostra il lightbox
+        lightboxImage.src = images[index].src; // Imposta l'immagine del lightbox
+        currentIndex = index; // Aggiorna l'indice corrente
     }
 
     function closeLightbox() {
-        lightbox.style.display = 'none';
+        lightbox.style.display = 'none'; // Chiude il lightbox
     }
 
     function changeImage(step) {
-        currentIndex += step;
+        currentIndex += step; // Cambia l'indice corrente
         if (currentIndex >= images.length) {
-            currentIndex = 0;
+            currentIndex = 0; // Torna alla prima immagine se l'indice supera la lunghezza dell'array
         } else if (currentIndex < 0) {
-            currentIndex = images.length - 1;
+            currentIndex = images.length - 1; // Torna all'ultima immagine se l'indice è negativo
         }
-        showLightbox(currentIndex);
+        showLightbox(currentIndex); // Mostra l'immagine aggiornata nel lightbox
     }
 
     hamburger.addEventListener('click', function(event) {
-        toggleNav();
-        event.stopPropagation();
+        toggleNav(); // Alterna la visibilità del menu di navigazione
+        event.stopPropagation(); // Ferma la propagazione dell'evento
     });
 
-    document.body.addEventListener('click', closeNav, true);
+    document.body.addEventListener('click', closeNav, true); // Chiude il menu di navigazione quando si clicca fuori
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault();
-            closeNav();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            event.preventDefault(); // Previene il comportamento predefinito del link
+            closeNav(); // Chiude il menu di navigazione
+            const targetId = this.getAttribute('href'); // Ottiene l'ID della sezione di destinazione
+            const targetSection = document.querySelector(targetId); // Seleziona la sezione di destinazione
             if (targetSection) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetRect = targetSection.getBoundingClientRect();
-                const topOffset = targetRect.top + window.pageYOffset - headerHeight;
-                window.scrollTo({ top: topOffset, behavior: 'smooth' });
+                const headerHeight = document.querySelector('.header').offsetHeight; // Altezza dell'header
+                const targetRect = targetSection.getBoundingClientRect(); // Coordinate della sezione di destinazione
+                const topOffset = targetRect.top + window.pageYOffset - headerHeight; // Calcola la posizione di scorrimento
+                window.scrollTo({ top: topOffset, behavior: 'smooth' }); // Scorre alla sezione di destinazione
             }
         });
     });
 
     images.forEach((img, index) => {
-        img.addEventListener('click', () => showLightbox(index));
+        img.addEventListener('click', () => showLightbox(index)); // Mostra il lightbox quando si clicca su un'immagine
     });
 
     lightboxPrev.addEventListener('click', function(event) {
-        changeImage(-1);
-        event.stopPropagation();
+        changeImage(-1); // Cambia l'immagine precedente
+        event.stopPropagation(); // Ferma la propagazione dell'evento
     });
 
     lightboxNext.addEventListener('click', function(event) {
-        changeImage(1);
-        event.stopPropagation();
+        changeImage(1); // Cambia l'immagine successiva
+        event.stopPropagation(); // Ferma la propagazione dell'evento
     });
 
     lightbox.addEventListener('click', function(event) {
         if (event.target === lightbox) {
-            closeLightbox();
+            closeLightbox(); // Chiude il lightbox se si clicca fuori dall'immagine
         }
     });
 
     lightboxClose.addEventListener('click', function(event) {
-        closeLightbox();
-        event.stopPropagation();
+        closeLightbox(); // Chiude il lightbox
+        event.stopPropagation(); // Ferma la propagazione dell'evento
     });
 
     function filterGallery(season) {
@@ -122,5 +122,5 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Errore nel caricamento delle notizie:', error));
 
-    window.filterGallery = filterGallery;
+    window.filterGallery = filterGallery; // Rende la funzione filterGallery accessibile globalmente
 });
