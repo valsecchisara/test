@@ -1,8 +1,8 @@
 # Portofolio di Moda
-ACME Novara : anno accademico 2023-2024
-Corso: WebDesign
-Studente: Sara Valsecchi
-Docente: Matteo Baccan
+ACME Novara : anno accademico 2023-2024.
+Corso: WebDesign.
+Studente: Sara Valsecchi.
+Docente: Matteo Baccan.
 
 Elementi principali
 
