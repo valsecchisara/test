@@ -16,5 +16,5 @@ Nella sezione "Esplora le ultime tendenze e collezioni." ho diviso i progetti in
 
 In "Ultime Notizie di Moda" ho effettuato un collegamento diretto tramite API Key per poter avere accesso ai servizi offerti dal New York Times. Ho trovato interessante inserire questa sezione per poter fare in modo che anche il mio sito sia in continuo aggiormaneto.
 
-Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilità di raccogliere i nomi, le email e i messaggi delle persone che inviano i rispettivi dati precedentemente elencati.
+Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilità di raccogliere i nomi, le email e i messaggi delle persone.
 
