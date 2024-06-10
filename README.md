@@ -12,7 +12,7 @@ All'interno del menù principale c'è la possibilità di cliccare sulle varie se
 
 Subito sotto, in "chi sono", troviamo un testo contenente la mia presentazione ed una mia foto. 
 
-Nella sezione "Esplora le ultime tendenze e collezioni." ho diviso i progetti in gruppi: Primavera, Estate, Autunno, Inverno; lasciando anche la possibilità di visualizzarli tutti insieme attraverso il tatsto "tutti".
+Nella sezione "Esplora le ultime tendenze e collezioni." ho diviso i progetti in gruppi: Primavera, Estate, Autunno, Inverno; lasciando anche la possibilità di visualizzarli tutti insieme attraverso il tasto "tutti".
 
 In "Ultime Notizie di Moda" ho effettuato un collegamento diretto tramite API Key per poter avere accesso ai servizi offerti dal New York Times. Ho trovato interessante inserire questa sezione per poter fare in modo che anche il mio sito sia in continuo aggiormaneto.
 
