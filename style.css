@@ -184,7 +184,7 @@ footer {
     padding: 10px; /* Spaziatura interna */
     margin-top: 20px; /* Margine superiore */
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Ombra sopra il footer */
-    width: 100%; /* Larghezza totale */
+    width: 300%; /* Larghezza totale */
 }
 
 .gallery-container {
@@ -204,11 +204,13 @@ footer {
     overflow: hidden; /* Nasconde il contenuto eccedente */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra intorno agli elementi */
     transition: transform 0.2s ease; /* Transizione per l'effetto hover */
+    width: 300px; /* Larghezza dell'elemento galleria */
+    height: 300px; /* Altezza dell'elemento galleria */
 }
 
 .gallery-item img {
-    width: 100%; /* Larghezza totale dell'immagine */
-    height: 200px; /* Altezza dell'immagine */
+    width: 300px; /* Larghezza fissa dell'immagine */
+    height: 300px; /* Altezza fissa dell'immagine */
     object-fit: cover; /* Adatta l'immagine al contenitore */
 }
 
