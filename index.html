@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio di Moda</title>
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <meta charset="UTF-8"> <!-- Specifica la codifica dei caratteri come UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Imposta il viewport per una visualizzazione mobile friendly -->
+    <title>Portfolio di Moda</title> <!-- Titolo della pagina -->
+    <link href="style.css" rel="stylesheet"> <!-- Collegamento al file CSS per lo stile -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Collegamento a Font Awesome per le icone -->
 </head>
 <body>
     <header class="header">
-        <button class="hamburger" aria-label="Apri menu">☰</button>
-        <img src="images/logo.png" alt="Logo Portfolio" class="header-logo">
+        <button class="hamburger" aria-label="Apri menu">☰</button> <!-- Bottone per il menu a tendina (hamburger menu) -->
+        <img src="images/logo.png" alt="Logo Portfolio" class="header-logo"> <!-- Logo del portfolio -->
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Chi Sono</a></li>
-                <li><a href="#gallery">Collezioni</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contatti</a></li>
+                <li><a href="#home">Home</a></li> <!-- Link alla sezione Home -->
+                <li><a href="#about">Chi Sono</a></li> <!-- Link alla sezione Chi Sono -->
+                <li><a href="#gallery">Collezioni</a></li> <!-- Link alla sezione Collezioni -->
+                <li><a href="#news">News</a></li> <!-- Link alla sezione News -->
+                <li><a href="#contact">Contatti</a></li> <!-- Link alla sezione Contatti -->
             </ul>
         </nav>
         <div class="social-icons">
             <a href="https://www.instagram.com/valsecchisara/" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-instagram"></i> <!-- Icona di Instagram -->
             </a>
             <a href="https://pin.it/6oUvsicz2" target="_blank" aria-label="Pinterest">
-                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-pinterest"></i> <!-- Icona di Pinterest -->
             </a>
             <a href="https://it.linkedin.com/in/sara-valsecchi-b68541203" target="_blank" aria-label="Linkedin">
-                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-linkedin"></i> <!-- Icona di LinkedIn -->
             </a>
         </div>
+
         <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-            <span class="lightbox-close">&times;</span>
-            <img class="lightbox-content" src="images/.jpg" alt="Description of the image">
-            <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
-            <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
+            <span class="lightbox-close">&times;</span> <!-- Pulsante per chiudere il lightbox -->
+            <img class="lightbox-content" src="images/.jpg" alt="Description of the image"> <!-- Immagine nel lightbox -->
+            <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span> <!-- Pulsante per l'immagine precedente -->
+            <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span> <!-- Pulsante per l'immagine successiva -->
         </div>
     </header>
+
     <section id="home">
-        <h2>Benvenuti</h2>
+        <h2>Benvenuti</h2> <!-- Aggiunta dell'intestazione -->
         <div class="cover-image">
-            <div class="cover-title">Sara Valsecchi</div>
-            <div class="sub-cover-title">Fashion & Textile Design</div>
+            <div class="cover-title">Sara Valsecchi</div> <!-- Titolo di copertina -->
+            <div class="sub-cover-title">Fashion & Textile Design</div> <!-- Sottotitolo di copertina -->
         </div>
         <div class="content-box">
             <section id="about">
@@ -52,51 +52,58 @@
                     <div class="about-text">
                         <h2>Chi Sono</h2>
                         <p>Ciao! Mi chiamo Sara Valsecchi, ho 22 anni e sono nata il 14 maggio 2002 a Vigevano. Attualmente vivo a Casale Monferrato, una città ricca di storia e cultura nel cuore del Piemonte. Dopo aver concluso gli studi superiori in Grafica e Comunicazione presso l'Istituto Tecnico Superiore Leardi della mia città, ho deciso di seguire la mia passione per il fashion design iscrivendomi all'ACME di Novara, dove attualmente sto perfezionando le mie competenze nel settore.
+            
                             Questo portfolio è una finestra sul mio mondo creativo, attraverso cui desidero condividere i miei lavori, espressione della mia visione estetica e del mio impegno costante verso l'innovazione e l'eccellenza nel design di moda. Grazie per la visita e spero che il mio lavoro possa ispirarti! <br> <br></p>
-                        <h2>Attestati e Certificazioni</h2>
+                            <h2>Attestati e Certificazioni</h2>
                         <div class="certificates">
                             <a href="attestati/Diploma.pdf" target="_blank">
-                                <img src="images/leardi.jpg" alt="Attestato 1" loading="lazy">
+                                <img src="images/leardi.jpg" alt="Attestato 1">
                             </a>
                             <a href="attestati/Attestato-Arte-Moda.pdf" target="_blank">
-                                <img src="images/artemoda.jpg" alt="Attestato 2" loading="lazy">
+                                <img src="images/artemoda.jpg" alt="Attestato 2">
                             </a>
                             <a href="attestati/Attestato-Workshop.pdf" target="_blank">
-                                <img src="images/attardi.png" alt="Attestato 3" loading="lazy">
+                                <img src="images/attardi.png" alt="Attestato 3">
                             </a>
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="images/Sara.JPG" alt="Sara Valsecchi" loading="lazy">
+                        <img src="images/Sara.JPG" alt="Sara Valsecchi">
                     </div>
                 </div>
             </section>
+                    
         </div>
     </section>
+
     <section id="gallery" class="content-box">
         <h2>Esplora le ultime collezioni di pattern.</h2>
         <div class="filter-buttons">
-            <button onclick="filterGallery('all')">Tutti</button>
-            <button onclick="filterGallery('primavera')">Primavera</button>
-            <button onclick="filterGallery('estate')">Estate</button>
-            <button onclick="filterGallery('autunno')">Autunno</button>
-            <button onclick="filterGallery('inverno')">Inverno</button>
+            <button onclick="filterGallery('all')">Tutti</button> <!-- Bottone per mostrare tutte le collezioni -->
+            <button onclick="filterGallery('primavera')">Primavera</button> <!-- Bottone per mostrare le collezioni di primavera -->
+            <button onclick="filterGallery('estate')">Estate</button> <!-- Bottone per mostrare le collezioni di estate -->
+            <button onclick="filterGallery('autunno')">Autunno</button> <!-- Bottone per mostrare le collezioni di autunno -->
+            <button onclick="filterGallery('inverno')">Inverno</button> <!-- Bottone per mostrare le collezioni di inverno -->
         </div>
         <div class="gallery-container">
-            <img class="gallery-item primavera" src="images/4.jpg" alt="Collezione Primavera" loading="lazy">
-            <img class="gallery-item primavera" src="images/2.png" alt="Collezione Primavera" loading="lazy">
-            <img class="gallery-item estate" src="images/10.jpg" alt="Collezione Estate" loading="lazy">
-            <img class="gallery-item estate" src="images/6.jpg" alt="Collezione Estate" loading="lazy">
-            <img class="gallery-item autunno" src="images/3.png" alt="Collezione Autunno" loading="lazy">
-            <img class="gallery-item autunno" src="images/5.png" alt="Collezione Autunno" loading="lazy">
-            <img class="gallery-item inverno" src="images/1.jpg" alt="Collezione Inverno" loading="lazy">
-            <img class="gallery-item inverno" src="images/11.jpg" alt="Collezione Inverno" loading="lazy">
+            <img class="gallery-item primavera" src="images/4.jpg" alt="Collezione Primavera">
+            <img class="gallery-item primavera" src="images/2.png" alt="Collezione Primavera">
+            <img class="gallery-item estate" src="images/10.jpg" alt="Collezione Estate">
+            <img class="gallery-item estate" src="images/6.jpg" alt="Collezione Estate">
+            <img class="gallery-item autunno" src="images/3.png" alt="Collezione Autunno">
+            <img class="gallery-item autunno" src="images/5.png" alt="Collezione Autunno">
+            <img class="gallery-item inverno" src="images/1.jpg" alt="Collezione Inverno">
+            <img class="gallery-item inverno" src="images/11.jpg" alt="Collezione Inverno">
         </div>
     </section>
+
     <section id="news" class="content-box">
         <h2>Ultime Notizie di Moda</h2>
-        <div class="news-container" id="news-articles"></div>
+        <div class="news-container" id="news-articles">
+            <!-- Gli articoli di notizie saranno aggiunti qui dinamicamente -->
+        </div>
     </section>
+    
     <section id="contact" class="content-box">
         <h2>Contatti</h2>
         <div class="contact-form">
@@ -108,9 +115,11 @@
             </form>
         </div>
     </section>
+    
+
     <footer class="content-box">
-        <p>© 2024 Portfolio Moda di Sara Valsecchi. Tutti i diritti riservati.</p>
+        <p>© 2024 Portfolio Moda di Sara Valsecchi. Tutti i diritti riservati.</p> <!-- Footer della pagina -->
     </footer>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script> <!-- Collegamento al file JavaScript -->
 </body>
 </html>
