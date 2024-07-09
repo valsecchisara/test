@@ -1,241 +1,224 @@
 body, html {
-    margin: 0; /* Rimuove i margini predefiniti */
-    padding: 10px; /* Spaziatura uniforme intorno al contenuto */
-    font-family: 'Georgia', serif; /* Imposta il font per il testo */
+    margin: 0;
+    padding: 10px;
+    font-family: 'Georgia', serif;
     background-color: #dcd6f7;
-    background-size: cover; /* Adatta l'immagine di sfondo per coprire l'intera area */
-    color: #836c88; /* Colore del testo */
-    overflow-x: hidden; /* Previene lo scorrimento orizzontale */
-    box-sizing: border-box; /* Include padding nelle dimensioni calcolate */
+    background-size: cover;
+    color: #836c88;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
-    padding: 20px; /* Spaziatura interna */
-    border-radius: 10px; /* Angoli arrotondati */
-    margin: 20px 0; /* Margine superiore e inferiore */
-    width: auto; /* Adatta la larghezza automaticamente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra intorno al contenuto */
-    position: relative; /* Posizionamento relativo per il contesto di sovrapposizione */
-    z-index: 1; /* Indice di profondità inferiore rispetto all'header */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 .header {
-    background-color: rgba(255, 255, 255, 1); /* Sfondo bianco */
-    color: #5d4954; /* Colore del testo */
-    padding: 20px; /* Spaziatura interna */
-    text-align: center; /* Testo centrato */
-    position: fixed; /* Posizione fissa */
-    top: 20px; /* Distanza dal bordo superiore */
-    left: 20px; /* Distanza dal bordo sinistro */
-    right: 20px; /* Distanza dal bordo destro */
-    z-index: 1000; /* Indice di profondità elevato */
-    display: flex; /* Usa flexbox per il layout */
-    justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
-    align-items: center; /* Allinea gli elementi al centro verticalmente */
-    height: 80px; /* Altezza dell'header */
-    border-radius: 10px; /* Angoli arrotondati */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Ombra intorno all'header */
+    background-color: rgba(255, 255, 255, 1);
+    color: #5d4954;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 nav ul {
-    display: flex; /* Disposizione flessibile degli elementi */
-    list-style: none; /* Rimuove i punti elenco */
-    margin: 0; /* Rimuove il margine */
-    padding: 0; /* Rimuove la spaziatura interna */
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    padding: 0 15px; /* Spaziatura interna degli elementi di lista */
+    padding: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: #5d4954; /* Colore del testo */
-    font-size: 16px; /* Dimensione del testo */
-    padding: 5px 10px; /* Spaziatura interna dei link */
+    text-decoration: none;
+    color: #5d4954;
+    font-size: 16px;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Colore di sfondo al passaggio del mouse */
-    color: #836c88; /* Colore del testo al passaggio del mouse */
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #836c88;
 }
 
 .hamburger {
-    display: none; /* Nasconde il bottone hamburger */
-    font-size: 30px; /* Dimensione del testo del bottone */
-    background: none; /* Rimuove lo sfondo */
-    border: none; /* Rimuove il bordo */
-    color: #5d4954; /* Colore del testo */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #5d4954;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Mostra il bottone hamburger su schermi piccoli */
+        display: block;
     }
 
     nav {
-        position: absolute; /* Posizionamento assoluto */
-        right: 0; /* Allinea a destra */
-        top: 60px; /* Posiziona sotto l'header */
-        width: 100%; /* Larghezza totale */
-        background: rgba(255, 255, 255, 0.95); /* Sfondo semi-trasparente */
-        display: none; /* Nasconde il menu */
-        flex-direction: column; /* Dispone gli elementi in colonna */
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        display: none;
+        flex-direction: column;
     }
 
     nav ul {
-        flex-direction: column; /* Dispone gli elementi di lista in colonna */
-        width: 100%; /* Larghezza totale */
+        flex-direction: column;
+        width: 100%;
     }
 
     nav ul li {
-        text-align: center; /* Allinea il testo al centro */
-        width: 100%; /* Larghezza totale */
-        padding: 10px 0; /* Spaziatura interna */
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
     }
 }
 
 .header-logo {
-    height: 130px; /* Altezza del logo */
-    width: auto; /* Larghezza automatica */
-    vertical-align: right; /* Allineamento verticale */
+    height: 130px;
+    width: auto;
+    vertical-align: right;
 }
 
 .cover-image {
-    position: relative; /* Posizionamento relativo */
-    width: 100%; /* Larghezza totale */
-    height: 300px; /* Altezza della copertina */
-    background: url('images/sfondo.jpg') no-repeat center center; /* Immagine di sfondo */
-    background-size: cover; /* Adatta l'immagine di sfondo */
-    margin-top: 160px; /* Margine superiore */
-    border-radius: 10px; /* Angoli arrotondati */
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('images/sfondo.jpg') no-repeat center center;
+    background-size: cover;
+    margin-top: 160px;
+    border-radius: 10px;
 }
 
 .cover-title, .sub-cover-title {
-    position: absolute; /* Posizionamento assoluto */
-    left: 50%; /* Allineamento orizzontale al centro */
-    transform: translateX(-50%); /* Traslazione per centrare */
-    text-align: center; /* Testo centrato */
-    color: white; /* Colore del testo */
-    font-family: 'Georgia', serif; /* Font del testo */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Ombra del testo */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .cover-title {
-    top: 30%; /* Distanza dal bordo superiore */
-    font-size: 10vw; /* Dimensione del testo relativa alla larghezza dello schermo */
+    top: 30%;
+    font-size: 10vw;
 }
 
 .sub-cover-title {
-    top: 65%; /* Distanza dal bordo superiore */
-    font-size: 5vw; /* Dimensione del testo relativa alla larghezza dello schermo */
+    top: 65%;
+    font-size: 5vw;
 }
 
 @media (min-width: 481px) {
     .cover-title {
-        font-size: 46px; /* Dimensione del testo su schermi più larghi */
+        font-size: 46px;
     }
 
     .sub-cover-title {
-        font-size: 24px; /* Dimensione del testo su schermi più larghi */
+        font-size: 24px;
     }
 }
 
 @media (min-width: 768px) {
     .cover-title {
-        font-size: 58px; /* Dimensione del testo su schermi ancora più larghi */
+        font-size: 58px;
     }
 
     .sub-cover-title {
-        font-size: 32px; /* Dimensione del testo su schermi ancora più larghi */
+        font-size: 32px;
     }
 }
 
 .social-icons {
-    display: flex; /* Disposizione flessibile degli elementi */
-    align-items: center; /* Allineamento verticale al centro */
-    justify-content: space-between; /* Distribuzione dello spazio tra gli elementi */
-    padding: 0 10px; /* Spaziatura interna */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 .social-icons a {
-    color: #5d4954; /* Colore del testo */
-    font-size: 24px; /* Dimensione del testo */
-    margin-left: 10px; /* Margine a sinistra */
+    color: #5d4954;
+    font-size: 24px;
+    margin-left: 10px;
 }
 
 .social-icons a:hover {
-    color: #836c88; /* Colore del testo al passaggio del mouse */
+    color: #836c88;
 }
 
 section {
-    padding-top: 100px; /* Spaziatura interna superiore */
-    margin-top: -100px; /* Margine superiore negativo */
-    position: relative; /* Posizionamento relativo */
-    display: block; /* Disposizione a blocco */
+    padding-top: 100px;
+    margin-top: -100px;
+    position: relative;
+    display: block;
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente */
-    color: #5d4954; /* Colore del testo */
-    text-align: center; /* Testo centrato */
-    padding: 10px; /* Spaziatura interna */
-    margin-top: 20px; /* Margine superiore */
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Ombra sopra il footer */
-    width: 100%; /* Larghezza totale */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #5d4954;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .gallery-container {
-    display: flex; /* Usa flex per un migliore controllo del centramento */
-    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
-    justify-content: center; /* Centra gli elementi orizzontalmente */
-    gap: 60px; /* Spaziatura tra gli elementi */
-    margin: 20px 0; /* Margine superiore e inferiore */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin: 20px 0;
 }
 
 .gallery-item {
-    display: flex; /* Disposizione flessibile degli elementi */
-    flex-direction: column; /* Disposizione degli elementi in colonna */
-    align-items: center; /* Allineamento degli elementi al centro */
-    background: white; /* Sfondo bianco */
-    border-radius: 10px; /* Angoli arrotondati */
-    overflow: hidden; /* Nasconde il contenuto eccedente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra intorno agli elementi */
-    transition: transform 0.2s ease; /* Transizione per l'effetto hover */
-    width: 300px; /* Larghezza dell'elemento galleria */
-    height: 300px; /* Altezza dell'elemento galleria */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    width: 300px;
+    height: 300px;
 }
 
 .gallery-item img {
-    width: 300px; /* Larghezza fissa dell'immagine */
-    height: 300px; /* Altezza fissa dell'immagine */
-    object-fit: cover; /* Adatta l'immagine al contenitore */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
-/* Generale */
-.content-box {
-    margin: 20px 0;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centra il testo */
-}
-
-h2 {
-    color: #3f3351;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* News */
 .news-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center; /* Centra gli elementi nella griglia */
+    justify-content: center;
     padding: 20px;
 }
 
@@ -250,7 +233,7 @@ h2 {
     transition: transform 0.2s ease;
     width: 100%;
     max-width: 300px;
-    margin: 10px auto; /* Centra l'elemento */
+    margin: 10px auto;
 }
 
 .news-item img {
@@ -287,7 +270,6 @@ h2 {
     text-decoration: underline;
 }
 
-/* Contatti */
 .contact-form {
     display: flex;
     justify-content: center;
@@ -305,7 +287,7 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; /* Assicura che il padding non faccia sforare il contenuto */
+    box-sizing: border-box;
 }
 
 .contact-form input,
@@ -316,7 +298,7 @@ h2 {
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
-    box-sizing: border-box; /* Assicura che il padding non faccia sforare il contenuto */
+    box-sizing: border-box;
 }
 
 .contact-form button {
@@ -336,12 +318,12 @@ h2 {
 
 @media (max-width: 768px) {
     .news-container {
-        grid-template-columns: 1fr; /* Una colonna su schermi piccoli */
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
     .contact-form form {
-        width: 100%; /* Riduce la larghezza del form su schermi piccoli */
+        width: 100%;
         padding: 10px;
     }
 
@@ -358,47 +340,47 @@ h2 {
 }
 
 .contact-form {
-    background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
-    padding: 30px; /* Spaziatura interna */
-    border-radius: 15px; /* Angoli arrotondati */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Ombra intorno al contenitore */
-    margin: 0 auto; /* Centratura del contenitore */
-    width: 80%; /* Larghezza del contenitore */
-    max-width: 500px; /* Larghezza massima del contenitore */
-    display: flex; /* Disposizione flessibile degli elementi */
-    flex-direction: column; /* Disposizione degli elementi in colonna */
-    align-items: center; /* Allineamento degli elementi al centro */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-form input, .contact-form textarea {
-    width: 100%; /* Larghezza totale degli input */
-    padding: 15px; /* Spaziatura interna */
-    margin-bottom: 10px; /* Margine inferiore */
-    border: none; /* Rimozione del bordo */
-    border-radius: 8px; /* Angoli arrotondati */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombra interna */
-    font-family: 'Georgia', serif; /* Font del testo */
-    font-size: 16px; /* Dimensione del testo */
-    color: #5d4954; /* Colore del testo */
-    display: block; /* Disposizione a blocco */
-    box-sizing: border-box; /* Assicura che il padding non faccia sforare il contenuto */
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #5d4954;
+    display: block;
+    box-sizing: border-box;
 }
 
 .contact-form button {
-    width: 100%; /* Larghezza totale del bottone */
-    padding: 15px; /* Spaziatura interna */
-    background-color: #dcd6f7; /* Colore di sfondo */
-    color: #3f3351; /* Colore del testo */
-    border: none; /* Rimozione del bordo */
-    border-radius: 8px; /* Angoli arrotondati */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    font-size: 18px; /* Dimensione del testo */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Ombra intorno al bottone */
-    transition: background-color 0.3s ease; /* Transizione per il colore di sfondo */
+    width: 100%;
+    padding: 15px;
+    background-color: #dcd6f7;
+    color: #3f3351;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #c5b9e2; /* Colore di sfondo al passaggio del mouse */
+    background-color: #c5b9e2;
 }
 
 .about-content {
@@ -418,7 +400,7 @@ h2 {
 }
 
 .about-image {
-    flex: 0 0 350px; /* Dimensione fissa per l'immagine */
+    flex: 0 0 350px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -434,8 +416,8 @@ h2 {
 
 .certificates {
     display: flex;
-    justify-content: space-around; /* Usa space-around per distribuire i loghi */
-    margin-top: 70px; /* Spazio tra il testo e i loghi */
+    justify-content: space-around;
+    margin-top: 70px;
     width: 100%;
 }
 
@@ -456,7 +438,7 @@ h2 {
     .about-content {
         flex-direction: column;
         align-items: center;
-        text-align: center; /* Centra il testo sui dispositivi mobili */
+        text-align: center;
     }
     
     .about-text {
@@ -474,7 +456,7 @@ h2 {
         flex-direction: row;
         justify-content: center;
         width: 100%;
-        margin-top: 10px; /* Piccola distanza dal testo in modalità mobile */
+        margin-top: 10px;
     }
     
     .certificates a {
@@ -483,71 +465,71 @@ h2 {
     }
 
     .certificates img {
-        width: 30%; /* Modifica la larghezza dei loghi sui dispositivi mobili */
-        max-width: 100px; /* Imposta una larghezza massima per i loghi */
+        width: 30%;
+        max-width: 100px;
     }
 }
 
 .lightbox {
-    display: none; /* Nasconde il lightbox */
-    position: fixed; /* Posizione fissa */
-    z-index: 9999; /* Indice di profondità elevato */
-    padding-top: 100px; /* Spaziatura interna superiore */
-    left: 0; /* Allinea a sinistra */
-    top: 0; /* Allinea in alto */
-    width: 100%; /* Larghezza totale */
-    height: 100%; /* Altezza totale */
-    overflow: auto; /* Abilita lo scorrimento */
-    background-color: rgb(0,0,0,0.9); /* Colore di sfondo semi-trasparente */
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0,0.9);
 }
 
 .lightbox-content {
-    margin: auto; /* Centratura del contenuto */
-    display: block; /* Disposizione a blocco */
-    width: 80%; /* Larghezza del contenuto */
-    max-width: 700px; /* Larghezza massima del contenuto */
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
 }
 
 .lightbox-close {
-    position: absolute; /* Posizionamento assoluto */
-    top: 25px; /* Distanza dal bordo superiore */
-    right: 35px; /* Distanza dal bordo destro */
-    color: #f1f1f1; /* Colore del testo */
-    font-size: 40px; /* Dimensione del testo */
-    font-weight: bold; /* Grassetto */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .lightbox-prev, .lightbox-next {
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    position: absolute; /* Posizionamento assoluto */
-    top: 50%; /* Allineamento verticale al centro */
-    width: auto; /* Larghezza automatica */
-    padding: 16px; /* Spaziatura interna */
-    margin-top: -50px; /* Margine superiore negativo */
-    color: white; /* Colore del testo */
-    font-weight: bold; /* Grassetto */
-    font-size: 20px; /* Dimensione del testo */
-    transition: 0.6s ease; /* Transizione */
-    border-radius: 0 3px 3px 0; /* Angoli arrotondati */
-    user-select: none; /* Disabilita la selezione del testo */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
 .lightbox-prev {
-    left: 0; /* Allinea a sinistra */
-    border-radius: 3px 0 0 3px; /* Angoli arrotondati */
+    left: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .lightbox-next {
-    right: 0; /* Allinea a destra */
-    border-radius: 0 3px 3px 0; /* Angoli arrotondati */
+    right: 0;
+    border-radius: 0 3px 3px 0;
 }
 
 @media screen and (max-width: 700px){
     .lightbox-prev, .lightbox-next {
-        font-size: 12px; /* Riduce la dimensione del testo */
+        font-size: 12px;
     }
     .lightbox-close {
-        font-size: 25px; /* Riduce la dimensione del testo */
+        font-size: 25px;
     }
 }
