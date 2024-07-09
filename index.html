@@ -6,7 +6,6 @@
     <title>Portfolio di Moda</title> <!-- Titolo della pagina -->
     <link href="style.css" rel="stylesheet"> <!-- Collegamento al file CSS per lo stile -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Collegamento a Font Awesome per le icone -->
-
 </head>
 <body>
     <header class="header">
@@ -17,6 +16,7 @@
                 <li><a href="#home">Home</a></li> <!-- Link alla sezione Home -->
                 <li><a href="#about">Chi Sono</a></li> <!-- Link alla sezione Chi Sono -->
                 <li><a href="#gallery">Collezioni</a></li> <!-- Link alla sezione Collezioni -->
+                <li><a href="#news">News</a></li> <!-- Link alla sezione News -->
                 <li><a href="#contact">Contatti</a></li> <!-- Link alla sezione Contatti -->
             </ul>
         </nav>
@@ -38,13 +38,12 @@
             <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span> <!-- Pulsante per l'immagine precedente -->
             <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span> <!-- Pulsante per l'immagine successiva -->
         </div>
-        
     </header>
 
     <section id="home">
         <div class="cover-image">
             <div class="cover-title">Sara Valsecchi</div> <!-- Titolo di copertina -->
-            <div class="sub-cover-title">ACME Fashion Design 3°</div> <!-- Sottotitolo di copertina -->
+            <div class="sub-cover-title">Fashion & Textile Design</div> <!-- Sottotitolo di copertina -->
         </div>
         <div class="content-box">
             <section id="about">
@@ -52,19 +51,32 @@
                     <div class="about-text">
                         <h2>Chi Sono</h2>
                         <p>Ciao! Mi chiamo Sara Valsecchi, ho 22 anni e sono nata il 14 maggio 2002 a Vigevano. Attualmente vivo a Casale Monferrato, una città ricca di storia e cultura nel cuore del Piemonte. Dopo aver concluso gli studi superiori in Grafica e Comunicazione presso l'Istituto Tecnico Superiore Leardi della mia città, ho deciso di seguire la mia passione per il fashion design iscrivendomi all'ACME di Novara, dove attualmente sto perfezionando le mie competenze nel settore.
-
-                            Questo portfolio è una finestra sul mio mondo creativo, attraverso cui desidero condividere i miei lavori, espressione della mia visione estetica e del mio impegno costante verso l'innovazione e l'eccellenza nel design di moda. Grazie per la visita e spero che il mio lavoro possa ispirarti!</p> <!-- Descrizione di Sara Valsecchi -->
+            
+                            Questo portfolio è una finestra sul mio mondo creativo, attraverso cui desidero condividere i miei lavori, espressione della mia visione estetica e del mio impegno costante verso l'innovazione e l'eccellenza nel design di moda. Grazie per la visita e spero che il mio lavoro possa ispirarti! <br> <br></p>
+                            <h2>Attestati e Certificazioni</h2>
+                        <div class="certificates">
+                            <a href="attestati/Diploma.pdf" target="_blank">
+                                <img src="images/leardi.jpg" alt="Attestato 1">
+                            </a>
+                            <a href="attestati/Attestato Arte Moda.pdf" target="_blank">
+                                <img src="images/artemoda.jpg" alt="Attestato 2">
+                            </a>
+                            <a href="attestati/Attestato Workshop.pdf" target="_blank">
+                                <img src="images/attardi.png" alt="Attestato 3">
+                            </a>
+                        </div>
                     </div>
                     <div class="about-image">
-                        <img src="images/io.heic" alt="Sara Valsecchi"> <!-- Immagine di Sara Valsecchi -->
+                        <img src="images/Sara.JPG" alt="Sara Valsecchi">
                     </div>
                 </div>
-            </section>            
+            </section>
+                    
         </div>
     </section>
 
     <section id="gallery" class="content-box">
-        <h2>Esplora le ultime tendenze e collezioni.</h2>
+        <h2>Esplora le ultime collezioni di pattern.</h2>
         <div class="filter-buttons">
             <button onclick="filterGallery('all')">Tutti</button> <!-- Bottone per mostrare tutte le collezioni -->
             <button onclick="filterGallery('primavera')">Primavera</button> <!-- Bottone per mostrare le collezioni di primavera -->
@@ -74,11 +86,14 @@
         </div>
         <div class="gallery-container">
             <img class="gallery-item primavera" src="images/4.jpg" alt="Collezione Primavera">
-            <img class="gallery-item estate" src="images/2.png" alt="Collezione Estate">
+            <img class="gallery-item primavera" src="images/2.png" alt="Collezione Primavera">
+            <img class="gallery-item estate" src="images/10.jpg" alt="Collezione Estate">
+            <img class="gallery-item estate" src="images/6.jpg" alt="Collezione Estate">
             <img class="gallery-item autunno" src="images/3.png" alt="Collezione Autunno">
+            <img class="gallery-item autunno" src="images/5.png" alt="Collezione Autunno">
             <img class="gallery-item inverno" src="images/1.jpg" alt="Collezione Inverno">
+            <img class="gallery-item inverno" src="images/11.jpg" alt="Collezione Inverno">
         </div>
-        
     </section>
 
     <section id="news" class="content-box">
@@ -86,19 +101,20 @@
         <div class="news-container" id="news-articles">
             <!-- Gli articoli di notizie saranno aggiunti qui dinamicamente -->
         </div>
-    </section>    
-
+    </section>
+    
     <section id="contact" class="content-box">
         <h2>Contatti</h2>
         <div class="contact-form">
             <form action="submit.php" method="POST">
-                <input type="text" name="name" placeholder="Il tuo nome" required> <!-- Campo per il nome -->
-                <input type="email" name="email" placeholder="La tua email" required> <!-- Campo per l'email -->
-                <textarea name="message" placeholder="Il tuo messaggio" rows="6" required></textarea> <!-- Campo per il messaggio -->
-                <button type="submit">Invia</button> <!-- Bottone per inviare il modulo -->
+                <input type="text" name="name" placeholder="Il tuo nome" required>
+                <input type="email" name="email" placeholder="La tua email" required>
+                <textarea name="message" placeholder="Il tuo messaggio" rows="6" required></textarea>
+                <button type="submit">Invia</button>
             </form>
         </div>
-    </section>    
+    </section>
+    
 
     <footer class="content-box">
         <p>© 2024 Portfolio Moda di Sara Valsecchi. Tutti i diritti riservati.</p> <!-- Footer della pagina -->
@@ -106,3 +122,4 @@
     <script src="script.js"></script> <!-- Collegamento al file JavaScript -->
 </body>
 </html>
+
