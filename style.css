@@ -2,7 +2,7 @@ body, html {
     margin: 0; /* Rimuove i margini predefiniti */
     padding: 10px; /* Spaziatura uniforme intorno al contenuto */
     font-family: 'Georgia', serif; /* Imposta il font per il testo */
-    background: url('https://source.unsplash.com/random/1024x768?light-fashion') no-repeat center center fixed; /* Immagine di sfondo */
+    background-color: #dcd6f7;
     background-size: cover; /* Adatta l'immagine di sfondo per coprire l'intera area */
     color: #836c88; /* Colore del testo */
     overflow-x: hidden; /* Previene lo scorrimento orizzontale */
@@ -107,7 +107,7 @@ nav ul li a:hover {
     position: relative; /* Posizionamento relativo */
     width: 100%; /* Larghezza totale */
     height: 300px; /* Altezza della copertina */
-    background: url('https://source.unsplash.com/random/1024x768?professional-fashion') no-repeat center center; /* Immagine di sfondo */
+    background: url('images/sfondo.jpg') no-repeat center center; /* Immagine di sfondo */
     background-size: cover; /* Adatta l'immagine di sfondo */
     margin-top: 160px; /* Margine superiore */
     border-radius: 10px; /* Angoli arrotondati */
@@ -125,12 +125,12 @@ nav ul li a:hover {
 
 .cover-title {
     top: 30%; /* Distanza dal bordo superiore */
-    font-size: 5vw; /* Dimensione del testo relativa alla larghezza dello schermo */
+    font-size: 10vw; /* Dimensione del testo relativa alla larghezza dello schermo */
 }
 
 .sub-cover-title {
-    top: 50%; /* Distanza dal bordo superiore */
-    font-size: 3vw; /* Dimensione del testo relativa alla larghezza dello schermo */
+    top: 65%; /* Distanza dal bordo superiore */
+    font-size: 5vw; /* Dimensione del testo relativa alla larghezza dello schermo */
 }
 
 @media (min-width: 481px) {
@@ -184,7 +184,7 @@ footer {
     padding: 10px; /* Spaziatura interna */
     margin-top: 20px; /* Margine superiore */
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Ombra sopra il footer */
-    width: 300%; /* Larghezza totale */
+    width: 100%; /* Larghezza totale */
 }
 
 .gallery-container {
@@ -214,38 +214,147 @@ footer {
     object-fit: cover; /* Adatta l'immagine al contenitore */
 }
 
+/* Generale */
+.content-box {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra il testo */
+}
+
+h2 {
+    color: #3f3351;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* News */
 .news-container {
-    display: grid; /* Disposizione a griglia degli elementi */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonne adattive */
-    gap: 10px; /* Spaziatura tra gli elementi */
-    margin: 20px 0; /* Margine superiore e inferiore */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centra gli elementi nella griglia */
+    padding: 20px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto; /* Centra l'elemento */
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .news-text {
-    padding: 10px; /* Spaziatura interna */
-    text-align: center; /* Testo centrato */
-    background: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
+    padding: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .news-text h3 {
-    margin-top: 5px; /* Margine superiore */
-    color: #3f3351; /* Colore del testo */
-    font-size: 18px; /* Dimensione del testo */
+    margin-top: 5px;
+    color: #3f3351;
+    font-size: 18px;
 }
 
 .news-text p {
-    font-size: 14px; /* Dimensione del testo */
-    color: #5d4954; /* Colore del testo */
+    font-size: 14px;
+    color: #5d4954;
+    padding: 0 10px;
 }
 
 .news-text a {
-    margin-top: 10px; /* Margine superiore */
-    color: #6a0dad; /* Colore del testo */
-    text-decoration: none; /* Rimuove la sottolineatura */
+    margin-top: 10px;
+    color: #6a0dad;
+    text-decoration: none;
 }
 
 .news-text a:hover {
-    text-decoration: underline; /* Sottolinea il testo al passaggio del mouse */
+    text-decoration: underline;
+}
+
+/* Contatti */
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Assicura che il padding non faccia sforare il contenuto */
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Assicura che il padding non faccia sforare il contenuto */
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #6a0dad;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #5a0bad;
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr; /* Una colonna su schermi piccoli */
+        gap: 10px;
+    }
+
+    .contact-form form {
+        width: 100%; /* Riduce la larghezza del form su schermi piccoli */
+        padding: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        padding: 8px;
+    }
 }
 
 .contact-form {
@@ -272,6 +381,7 @@ footer {
     font-size: 16px; /* Dimensione del testo */
     color: #5d4954; /* Colore del testo */
     display: block; /* Disposizione a blocco */
+    box-sizing: border-box; /* Assicura che il padding non faccia sforare il contenuto */
 }
 
 .contact-form button {
@@ -292,25 +402,90 @@ footer {
 }
 
 .about-content {
-    display: flex; /* Disposizione flessibile degli elementi */
-    align-items: center; /* Allineamento verticale al centro */
-    justify-content: space-between; /* Distribuzione dello spazio tra gli elementi */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .about-text {
-    width: 60%; /* Larghezza del contenitore */
-    padding-right: 20px; /* Spaziatura interna a destra */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 20px;
 }
 
 .about-image {
-    width: 40%; /* Larghezza del contenitore */
+    flex: 0 0 350px; /* Dimensione fissa per l'immagine */
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .about-image img {
-    width: 100%; /* Larghezza totale dell'immagine */
-    height: auto; /* Altezza automatica */
-    border-radius: 8px; /* Angoli arrotondati */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombra intorno all'immagine */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificates {
+    display: flex;
+    justify-content: space-around; /* Usa space-around per distribuire i loghi */
+    margin-top: 70px; /* Spazio tra il testo e i loghi */
+    width: 100%;
+}
+
+.certificates a {
+    flex: 1;
+    text-align: center;
+}
+
+.certificates img {
+    width: 100px;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Centra il testo sui dispositivi mobili */
+    }
+    
+    .about-text {
+        padding-right: 0;
+        width: 100%;
+    }
+    
+    .about-image {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .certificates {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px; /* Piccola distanza dal testo in modalità mobile */
+    }
+    
+    .certificates a {
+        flex: initial;
+        margin-bottom: 10px;
+    }
+
+    .certificates img {
+        width: 30%; /* Modifica la larghezza dei loghi sui dispositivi mobili */
+        max-width: 100px; /* Imposta una larghezza massima per i loghi */
+    }
 }
 
 .lightbox {
