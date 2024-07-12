@@ -18,7 +18,7 @@ Troviamo poi la sezione "Attestati e Certificazioni", nella quale possiamo trova
 
 Nella sezione "Esplora le ultime collezioni dei pattern." ho diviso i pattern in gruppi: Primavera, Estate, Autunno, Inverno; lasciando anche la possibilità di visualizzarli tutti insieme attraverso il tasto "tutti".
 
-In "Ultime Notizie di Moda" ho effettuato un collegamento diretto tramite API Key per poter avere accesso ai servizi offerti dal New York Times. Ho trovato interessante inserire questa sezione per poter fare in modo che anche il mio sito sia in continuo aggiormaneto.
+In "Ultime Notizie di Moda" ho effettuato un collegamento diretto tramite API Key per poter avere accesso ai servizi offerti dal New York Times. Ho trovato interessante inserire questa sezione per poter fare in modo che anche il mio sito sia in continuo aggiornamento.
 
 Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilità, se compilati, di raccogliere i nomi, le email e i messaggi delle persone.
 
