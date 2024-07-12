@@ -9,7 +9,7 @@ Docente: Matteo Baccan
 
 Elementi principali
 
-Il mio portfolio di moda raggruppa alcuni dei miei lavori realizzati durante gli anni di accademia.
+Il mio portfolio di moda raggruppa alcuni dei miei lavori.
 All'interno del menu principale c'è la possibilità di cliccare sulle varie sezioni: "Home",
 "Chi Sono", "Collezioni", "Contatti". Allo stesso tempo sempre nel menu ci sono i collegamenti ai social.
 
