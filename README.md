@@ -26,4 +26,8 @@ Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilit
 
 Il repository è pubblicato a questo indirizzo: https://portfoliodimoda.netlify.app 
 
+# Test performance
+
+https://pagespeed.web.dev/analysis/https-portfoliodimoda-netlify-app/3x8ml8v11n?form_factor=mobile
+
 
