@@ -34,3 +34,7 @@ https://pagespeed.web.dev/analysis/https-portfoliodimoda-netlify-app/s2pisz1mlp?
 
 https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fportfoliodimoda.netlify.app&width=1400&height=700
 
+# Test validatore w3c
+
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fportfoliodimoda.netlify.app
+
