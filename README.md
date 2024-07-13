@@ -24,6 +24,6 @@ Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilit
 
 # Indirizzo di pubblicazione Netlify
 
-https://portfoliodimoda.netlify.app 
+Il repository è pubblicato a questo indirizzo: https://portfoliodimoda.netlify.app 
 
 
