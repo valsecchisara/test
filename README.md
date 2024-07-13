@@ -38,3 +38,7 @@ https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fportfoliodimod
 
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fportfoliodimoda.netlify.app
 
+# Info
+
+Materiale in italiano propedeutico alla realizzazione del corso di WebDesign per https://www.acmenovara.it
+
