@@ -30,3 +30,7 @@ Il repository è pubblicato a questo indirizzo: https://portfoliodimoda.netlify.
 
 https://pagespeed.web.dev/analysis/https-portfoliodimoda-netlify-app/s2pisz1mlp?form_factor=mobile
 
+# Test responsive
+
+https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Fportfoliodimoda.netlify.app&width=1400&height=700
+
