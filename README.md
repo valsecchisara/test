@@ -30,8 +30,6 @@ Github
 
 Visual Studio Code
 
-YouTube
-
 # Indirizzo di pubblicazione Netlify
 
 Il repository è pubblicato a questo indirizzo: https://portfoliodimoda.netlify.app 
