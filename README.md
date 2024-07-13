@@ -22,3 +22,8 @@ In "Ultime Notizie di Moda" ho effettuato un collegamento diretto tramite API Ke
 
 Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilità, se compilati, di raccogliere i nomi, le email e i messaggi delle persone che vogliono scrivermi o chiedere qualcosa tramite un messaggio.
 
+# Indirizzo di pubblicazione Netlify
+
+https://portfoliodimoda.netlify.app 
+
+
