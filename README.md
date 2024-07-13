@@ -3,11 +3,11 @@ ACME Novara : anno accademico 2023-2024
 
 Corso: WebDesign
 
-Studente: Sara Valsecchi
+Studente: Sara Valsecchi - Matricola n.932
 
 Docente: Matteo Baccan
 
-Elementi principali
+#Elementi principali
 
 Il mio portfolio di moda raggruppa alcuni dei miei lavori.
 All'interno del menu principale c'è la possibilità di cliccare sulle varie sezioni: "Home",
