@@ -22,6 +22,13 @@ In "Ultime Notizie di Moda" ho effettuato un collegamento diretto tramite API Ke
 
 Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilità, se compilati, di raccogliere i nomi, le email e i messaggi delle persone che vogliono scrivermi o chiedere qualcosa tramite un messaggio.
 
+# Strumenti utilizzati per il sito
+
+ChatGPT
+Github
+Visual Studio Code
+YouTube
+
 # Indirizzo di pubblicazione Netlify
 
 Il repository è pubblicato a questo indirizzo: https://portfoliodimoda.netlify.app 
