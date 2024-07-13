@@ -1,7 +1,7 @@
 
 ACME Novara : anno accademico 2023-2024
 
-Corso: WebDesign
+Corso: Web Design
 
 Docente: Matteo Baccan
 
