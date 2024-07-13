@@ -7,7 +7,7 @@ Studente: Sara Valsecchi - Matricola n.932
 
 Docente: Matteo Baccan
 
-#Elementi principali
+# Elemento principali
 
 Il mio portfolio di moda raggruppa alcuni dei miei lavori.
 All'interno del menu principale c'è la possibilità di cliccare sulle varie sezioni: "Home",
