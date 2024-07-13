@@ -25,8 +25,11 @@ Nell'ultima parte ho inserito la sezione "contatti" nella quale ho la possibilit
 # Strumenti utilizzati per il sito
 
 ChatGPT
+
 Github
+
 Visual Studio Code
+
 YouTube
 
 # Indirizzo di pubblicazione Netlify
