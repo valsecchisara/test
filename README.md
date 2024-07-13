@@ -9,7 +9,7 @@ Studente: Sara Valsecchi
 
 Matricola n.932
 
-# Portfolio personale di moda
+# Portfolio personale di Moda
 
 Il mio portfolio di moda raggruppa alcuni dei miei lavori.
 All'interno del menu principale c'è la possibilità di cliccare sulle varie sezioni: "Home",
